@@ -28,7 +28,12 @@ const house = new THREE.Group()
 scene.add(house)
 
 //walls
-
+const walls = new THREE.Mesh(
+    new THREE.BoxBufferGeometry(4, 2.5, 4),
+    new THREE.MeshStandardMaterial({ color:0xac8e82 })
+    )
+    walls.position.y = 1.25
+house.add(walls)
 
 // Floor
 const floor = new THREE.Mesh(
